@@ -1,0 +1,78 @@
+body {
+  margin: 0;
+  max-width: 100%;
+  padding: 0;
+  background: #973C41;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'True North Dots';
+  font-weight: normal;
+  text-align: center;
+  margin: 1em 0;
+}
+h1 {
+  font-size: 3em;
+}
+h2 {
+  font-size: 2em;
+}
+
+section {
+    padding: 1px 0;
+}
+
+.fullsize {
+  background: rgba(0,0,0,0.1);
+  color: #fff;
+  position: relative;
+  height: 500px;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.content-wrap {
+  max-width: 50em;
+  margin: 2em auto;
+  padding: 0 0;
+}
+
+@media screen and (min-width: 40em) {
+  nav {
+    position: fixed;
+    z-index: 10;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    display: table;
+    margin: auto;
+    height: auto;
+  }
+}
+
+.menu {
+  display: table;
+  //margin: auto;
+  height: auto;
+  // position: absolute;
+  // top: 30%;
+}
+
+.arrow-down {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+.arrow-down-inner {
+  height: 40px;
+  width: 130px;
+  background: url(../images/arrow-down.png);
+  display: block;
+  text-align: center;
+  margin: 1em auto;
+}

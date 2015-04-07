@@ -1,15 +1,15 @@
 <?php snippet('header') ?>
 
+  <?php snippet('menu') ?>
   <main class="main" role="main">
 
-    <div class="text">
-      <h1><?php echo $page->title()->html() ?></h1>
-      <?php echo $page->text()->kirbytext() ?>
-    </div>
-
-    <hr>
-
-    <?php snippet('projects') ?>
+    <?php foreach($pages->visible() as $section): ?>
+      <?php if(file_exists($kirby->roots->snippets() . '/' . $section->content()->name() . '.php')): ?>
+        <?php snippet($section->content()->name(), array('section' => $section)); ?>
+      <?php else: ?>
+          <?php snippet('default', array('section' => $section)); ?>
+      <?php endif ?>
+    <?php endforeach ?>
 
   </main>
 
